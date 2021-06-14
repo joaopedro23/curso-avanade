@@ -8,13 +8,15 @@
     <script>
       const numbers = [1, 2, 3, 4, 5]
 
-      console.log([...numbers, 6, 7, 8])
+      console.log([...numbers, 6, 7, 8, ...numbers])
 
       const name = 'Maycon'
 
-      console.log(...name)
+      console.log(...name,'Maycon')
 
       function sum(firstNumber, secondNumber) {
+        console.log(firstNumber)
+        console.log(secondNumber)
         return firstNumber + secondNumber
       }
 
@@ -24,11 +26,28 @@
 
 
       function multiply(...numbers) {
+        console.log([...numbers], 'numbers')
         const arr = numbers.map(number => number * 2)
         return arr
       }
 
-      console.log(multiply(1, 2, 3, 4, 5))
+            console.log(multiply(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+          
+      const object1 = {
+      name: "object1",
+      lastname: "asdasd"
+
+      };
+
+      const object2 = {
+      ...object1,
+      color: "red"
+      
+      };
+
+      const joinObjects = {...object1, ...object2};
+      
+      console.log("objects", joinObjects);
     </script>
   </body>
 </html>
