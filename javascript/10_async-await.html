@@ -7,7 +7,8 @@
   <body>
     <script>
       async function getRepository() {
-        const repositorys = await fetch('https://api.github.com/users/mayconbalves/repos?per_page=50')
+        const repositorys = fetch('https://api.github.com/users/mayconbalves/repos?per_page=50')
+        console.log(repositorys)
         const data = await repositorys.json()
         console.log(data)
       }
